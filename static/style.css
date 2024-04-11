@@ -1,0 +1,195 @@
+* {
+    font-size: 25px;
+    font-family:sans-serif;
+    margin: 0;
+    color: white;
+}
+
+body {
+    background: linear-gradient(to left, hsl(208, 91%, 69%), hsl(232, 100%, 57%), hsl(208, 91%, 69%));
+}
+
+#content {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login-form {
+    background: hsl(210, 95%, 15%);
+    border: none;
+    border-radius: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 70px;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    align-self: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+}
+
+input {
+    padding: 5px;
+    margin-top: 5px;
+    color: black;
+}
+
+button {
+    font-weight: bold;
+    padding: 5px 10px;
+    width: 100%;
+    margin-top: 10px;
+    background: linear-gradient(to left top, hsl(208, 91%, 69%), hsl(159, 100%, 30%), hsl(208, 91%, 69%));
+}
+
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(to left top, hsl(208, 91%, 69%), hsl(159, 100%, 40%), hsl(208, 91%, 69%));
+}
+
+.profileDiv {
+    position: absolute;
+    display: flex;
+    height: 30%;
+    margin-top: 65px;
+}
+
+#identificationList {
+    border: 3px solid hsl(208, 91%, 29%);
+    border-radius: 20px;
+    margin-right: 20px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+.AllProjects {
+   border: 3px solid  hsl(208, 91%, 29%);
+   border-radius: 20px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+.projectInfo {
+    margin: 10px;
+    width: 80%;
+    border-radius: 10px;
+    padding: 5px;
+    background: linear-gradient(to left top, hsl(208, 91%, 69%), hsl(208, 91%, 49%));
+    text-align: center;
+}
+
+.graphs {
+    display: flex;
+    transform: translate(6% ,40vh);
+}
+
+.auditRatioDiv {
+    margin-left: 5vw;
+}
+
+.graphLineUp {
+    animation-duration: 3s;
+    animation-name: grow;
+    animation-fill-mode: forwards;
+    transform-origin: 0% 73.5%;
+    transform: scaleY(0);
+}
+
+.graphLineRight {
+    animation-duration: 3s;
+    animation-name: growRight;
+    animation-fill-mode: forwards;
+    transform-origin: 9% 0%;
+    transform: scaleX(0);
+}
+
+.xpColumn, .done, .recieved {
+    animation-duration: 3s;
+    animation-delay: 2.5s;
+    animation-name: grow;
+    animation-fill-mode: forwards;
+    transform-origin: 0% 72.5%;
+    transform: scaleY(0);
+}
+
+.xpColumn {
+    stroke: hsl(144, 100%, 39%);
+}
+
+.recieved {
+    stroke: hsl(18, 100%, 61%);
+}
+
+@keyframes grow {
+    100% {transform: scaleY(1);}
+}
+
+@keyframes growRight {
+    100% {transform: scaleX(1);}
+}
+
+.customText, .ratio {
+    transform: translateY(-100%);
+    font-size: 4px;
+    animation-duration: 3s;
+    animation-delay: 4.6s;
+    animation-name: showY;
+    animation-fill-mode: forwards;  
+}
+
+.ratio {
+    font-size: 5px;
+}
+
+.projectName {
+    transform: translateX(100%);
+    font-size: 4px; 
+    writing-mode: tb;
+    animation-duration: 3s;
+    animation-delay: 4.6s;
+    animation-name: showX;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showY {
+    100% {transform: translateY(0%);}
+}
+
+@keyframes showX {
+    100% {transform: translateX(0%);}
+}
+
+::-webkit-scrollbar {
+    width: 12px
+}
+
+::-webkit-scrollbar-track {
+    background-color:hsl(208, 91%, 69%);
+    border-radius: 100vw;
+    margin-block: 50px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color:hsl(208, 91%, 44%);
+    border-radius: 100vw;
+}
+
